@@ -1,23 +1,36 @@
 *{
     text-decoration: none;
 }
-/* menu */
-nav{
-    display: flex;
-    box-shadow: rgba(91, 91, 97, 0.315) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    padding: 10px;
-    border-bottom: 3px solid orange;
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
 }
-nav .menu{
+/* menu */
+
+nav,.logo,.menu{
+    display: flex;
+}
+
+.logo{
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    box-shadow: rgba(91, 91, 97, 0.315) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 8px;
+}
+
+
+.menu{
+    width: 20%;
     margin: auto;
 }
-.menu{
-    display: flex;
-    width: 20%;
-}
+
 .logo{
     font-size: 25px;
     color: rgb(22, 207, 68);
+    margin-left: 15px;
 }
 span{
     color: rgb(243, 4, 104);
@@ -25,14 +38,10 @@ span{
 }
 
 a{
-    
     padding: 15px;
     margin: 5px;
-    width: 50%;
-    box-shadow: rgb(255, 251, 251) 0px 2px 8px 0px;
 }
 
 .active{
-    
-    background: rgba(204, 215, 221, 0.469);
+    border-bottom: 2px solid blue;
 }
