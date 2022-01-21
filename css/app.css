@@ -1,0 +1,39 @@
+*{
+    text-decoration: none;
+}
+/* menu */
+nav{
+    display: flex;
+    box-shadow: rgba(91, 91, 97, 0.315) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    /* margin: 0; */
+    padding: 10px;
+    border-bottom: 3px solid orange;
+}
+nav .menu{
+    margin: auto;
+}
+.menu{
+    display: flex;
+    width: 30%;
+}
+.logo{
+    font-size: 25px;
+    color: rgb(22, 207, 68);
+}
+span{
+    color: rgb(243, 4, 104);
+    font-size: 30px;
+}
+/* btn */
+button{
+    padding: 15px;
+    margin: 5px;
+    border: none;
+    width: 100%;
+    box-shadow: rgb(255, 251, 251) 0px 2px 8px 0px;
+}
+
+.active{
+    /* border-bottom: 3px solid blue; */
+    background: rgba(75, 181, 243, 0.469);
+}
