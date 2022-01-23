@@ -117,13 +117,11 @@ form{
     background: #eee;
     padding: 15px;
     border-radius: 5px;
+    border-top: 2px solid red;
     margin-top: 15px;
     box-sizing: border-box;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
-
-
 .create-form{
     width: 50%;
     margin: auto;
@@ -141,4 +139,22 @@ form{
 }
 #btnSubmit:hover{
     background: rgb(94, 94, 253);
+}
+/* ---------------Phanith I just add icon and create some div in HTML---------------------- */
+.card .option{
+    float: right;
+    text-align: center;
+    display: flex;
+    gap: 1rem;
+}
+.card .option i{
+    font-size: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+.card .option #edit{
+    color: #1565c0;
+}
+.card .option #delete{
+    color: red;
 }
