@@ -8,7 +8,7 @@ body{
 }
 /* menu */
 
-nav,.logo,.menu,.buttonDone,#btnPlayQuiz,.btn-submit{
+nav,.logo,.menu,.buttonDone,#btnPlayQuiz,.btn-submit,.btn-add{
     display: flex;
 }
 
@@ -105,7 +105,11 @@ a{
 
 .question input{
     width: 90%;
+    padding: 15px;
+    border: none;
+    margin-bottom: 8px;
 }
+
 
 h1{
     color: blue;
@@ -117,7 +121,6 @@ form{
     background: #eee;
     padding: 15px;
     border-radius: 5px;
-    border-top: 2px solid red;
     margin-top: 15px;
     box-sizing: border-box;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -125,8 +128,22 @@ form{
 .create-form{
     width: 50%;
     margin: auto;
+    background:rgb(194, 193, 252); 
+    padding: 20px;
+    box-sizing: border-box;
+    border-top: 5px solid blue;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-left: 2px solid blue;
 }
 
+.answer input{
+    margin: 8px 0;
+    border: none;
+    padding: 5px;
+    border-bottom: 2px solid blue;
+    border-radius: 5px;
+}
 #btnSubmit{
     background-color: blue;
     padding: 10px;
@@ -141,20 +158,22 @@ form{
     background: rgb(94, 94, 253);
 }
 /* ---------------Phanith I just add icon and create some div in HTML---------------------- */
-.card .option{
-    float: right;
-    text-align: center;
-    display: flex;
-    gap: 1rem;
+
+
+.btn-add{
+    justify-content: end;
 }
-.card .option i{
-    font-size: 35px;
-    text-align: center;
+
+.btn-add button{
+    padding: 5px;
+    width: 15%;
+    color: white;
+    background: rgb(23, 23, 243);
+    border: none;
     cursor: pointer;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.card .option #edit{
-    color: #1565c0;
-}
-.card .option #delete{
-    color: red;
+.btn-add button:hover{
+    background:rgb(45, 45, 250) ;
 }

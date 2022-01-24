@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2022-QUIZ-APP</title>
     <link rel="stylesheet" href="../css/app.css">
-    <script src="../js/editApp.js" defer></script>
+    <script src="../js/app_set.js" defer></script>
 </head>
 <body>
     <!-- menu -->
@@ -17,12 +17,17 @@
           <a href="#" class="active">EDIT</a>
         </div>
     </nav>
+    <!-- Button Done  -->
     <div class="buttonDone">
         <button id="btnDone">Done</button>
     </div>
+
+    <div class="card-form-created">
+
+    </div>
     <div class="create-form">
         <div class="question">
-            <input type="text" id="question" placeholder="Question">
+            <input type="text" id="quest" placeholder="Question">
         </div>
         <div class="answer">
             <input type="text" id="option1" placeholder="Answer1"> <br>
@@ -30,7 +35,10 @@
             <input type="text" id="option3" placeholder="Answer3"> <br>
             <input type="text" id="option4" placeholder="Answer4">
         </div>
-
+        <div class="btn-add">
+            <button id="btnAdd">Add +</button>
+        </div>
     </div>
+    
 </body>
 </html>
