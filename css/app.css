@@ -8,7 +8,7 @@ body{
 }
 /* menu */
 
-nav,.logo,.menu,.buttonDone,#btnPlayQuiz,.btn-submit,.btn-add{
+nav,.logo,.menu,.button-add,#btnPlayQuiz,.btn-submit,.btn-create-btn-cancel{
     display: flex;
 }
 
@@ -71,11 +71,11 @@ a{
 
 /* Style Form input edit Page */
 
-.buttonDone{
+.button-add{
     justify-content: flex-end;
 }
 
-.buttonDone button{
+.button-add button{
     padding: 10px;
     width: 10%;
     margin:5px 15px;
@@ -87,14 +87,14 @@ a{
     cursor: pointer;
 }
 
-.buttonDone button:hover,.btnPlayQuiz button:hover{
+.button-add button:hover,.btnPlayQuiz button:hover{
     background: rgb(94, 94, 253);
 }
 
 #quizContainer{
     width: 50%;
     margin: auto;
-    background: rgb(194, 193, 252);
+    background: rgb(178, 177, 250);
     border-top: 5px blue solid;
     padding: 15px;
     border-radius: 5px;
@@ -157,23 +157,33 @@ form{
 #btnSubmit:hover{
     background: rgb(94, 94, 253);
 }
-/* ---------------Phanith I just add icon and create some div in HTML---------------------- */
 
 
-.btn-add{
-    justify-content: end;
-}
 
-.btn-add button{
+#btn-cancel,#btn-create{
     padding: 5px;
     width: 15%;
     color: white;
-    background: rgb(23, 23, 243);
     border: none;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.btn-add button:hover{
-    background:rgb(45, 45, 250) ;
+#btn-cancel{
+    background: rgb(184, 3, 63);
+}
+#btn-cancel:hover{
+    background:rgb(245, 21, 77) ;
+}
+
+#btn-create{
+    background: green;
+}
+#btn-create:hover{
+    background: rgb(2, 177, 2);
+}
+
+.btn-create-btn-cancel{
+    justify-content: space-between;
+    margin-top: 15px;
 }
