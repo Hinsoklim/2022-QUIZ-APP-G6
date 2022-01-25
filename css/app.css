@@ -115,7 +115,10 @@ h1{
     color: blue;
     text-align: center;
 }
-
+.card-form-created{
+    width: 70%;
+    margin: auto;
+}
 form{
     width: 100%;
     background: #eee;
@@ -177,7 +180,8 @@ form{
 .btn-add button:hover{
     background:rgb(45, 45, 250) ;
 }
-/*button delete */
-.delete{
+/* ol*/
+ol{
     display: flex;
+    justify-content: space-between;
 }
