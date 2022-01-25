@@ -177,3 +177,7 @@ form{
 .btn-add button:hover{
     background:rgb(45, 45, 250) ;
 }
+/*button delete */
+.delete{
+    display: flex;
+}
