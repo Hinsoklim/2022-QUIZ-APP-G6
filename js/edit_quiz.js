@@ -1,4 +1,40 @@
+// Function Display Question
+function displayQuestion( array ){
+    let div = document.createElement('div');
+    div.className = 'quizForm';
+    div.id = 'editQuiz'
+    document.body.appendChild(div);
+    let old = document.querySelectorAll('.quizForm');
+    if (old.length >1){
+        old[0].remove();
+    }
+    for (let questionQuiz of array){
+        let form = document.createElement('form');
+        let p = document.createElement('p');
+        let btnDelete = document.createElement('span');
+        btnDelete.textContent = 'Delete';
+        btnDelete.classList.add('delete')
+        btnDelete.id = 'delete'
 
+        console.log(btnDelete)
+        p.textContent = questionQuiz.question;
+        form.appendChild(p);
+        div.appendChild(form);
+        for(ans of questionQuiz.answer){
+            let optionAn = document.createElement('input');
+            let br = document.createElement('br');
+            let label = document.createElement('label');
+            optionAn.type = 'radio';
+            optionAn.name = 'answer';
+            label = textContent = ans.option;
+            form.append(optionAn);
+            form.append(label);
+            form.append(br);
+            form.appendChild(btnDelete);
+            div.appendChild(form);
+        }
+    }
+}
 
 
 // Function Add question
