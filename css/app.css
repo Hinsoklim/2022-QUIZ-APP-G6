@@ -115,7 +115,10 @@ h1{
     color: blue;
     text-align: center;
 }
-
+.card-form-created{
+    width: 70%;
+    margin: auto;
+}
 form{
     width: 100%;
     background: #eee;
@@ -160,24 +163,27 @@ form{
 
 
 
-#btn-cancel,#btn-create{
+#btn-answer,#btn-create{
     padding: 5px;
     width: 15%;
-    color: white;
+    
     border: none;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-#btn-cancel{
-    background: rgb(184, 3, 63);
+#btn-answer{
+    border:2px solid blue;
+    color: black;
 }
-#btn-cancel:hover{
-    background:rgb(245, 21, 77) ;
+#btn-answer:hover{
+    color: blue;
+    
 }
 
 #btn-create{
     background: green;
+    color: white;
 }
 #btn-create:hover{
     background: rgb(2, 177, 2);
@@ -186,4 +192,32 @@ form{
 .btn-create-btn-cancel{
     justify-content: space-between;
     margin-top: 15px;
+}
+
+
+.quizForm{
+    width: 100%;
+    margin: auto;
+    margin-top: 35px;
+    
+}
+form{
+    border-top: 3px solid blue;
+}
+
+.quizForm form input{
+    margin-top: 15px;
+}
+
+.delete{
+    color: red;
+    font-size: small;
+    margin-left: 550px;
+    border: 1px solid red;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#editQuiz{
+    width: 50%;
 }
