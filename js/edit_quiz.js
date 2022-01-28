@@ -4,22 +4,28 @@ function displayQuestion( array ){
     div.className = 'quizForm';
     div.id = 'editQuiz'
     document.body.appendChild(div);
+    
     let old = document.querySelectorAll('.quizForm');
     if (old.length >1){
         old[0].remove();
     }
     for (let questionQuiz of array){
+
         let form = document.createElement('form');
+        let title = document.createElement('p');
         let p = document.createElement('p');
         let btnDelete = document.createElement('span');
-        btnDelete.textContent = 'Delete';
-        btnDelete.classList.add('delete')
-        btnDelete.id = 'delete'
+        form.classList='listQuestion';
+        btnDelete.textContent = 'delete';
+        btnDelete.classList='delete';
 
-        console.log(btnDelete)
+        console.log(title)
+        title.textContent = questionQuiz.titleQuiz;
+        div.appendChild(title)
         p.textContent = questionQuiz.question;
         form.appendChild(p);
         div.appendChild(form);
+
         for(ans of questionQuiz.answer){
             let optionAn = document.createElement('input');
             let br = document.createElement('br');
@@ -33,13 +39,18 @@ function displayQuestion( array ){
             form.appendChild(btnDelete);
             div.appendChild(form);
         }
+        console.log(questionQuiz)
     }
+    
+    
+
 }
 
 
 // Function Add question
 function addQuestion() {
     // Get Value Input
+    let inputTitle = document.getElementById('title').value;
     let inputQuestion = document.getElementById('question').value;
     let inputAn1 = document.getElementById('option1').value;
     let inputAn2 = document.getElementById('option2').value;
@@ -54,6 +65,7 @@ function addQuestion() {
         let Answer2 = {};
         let Answer3 = {};
         let Answer4 = {};
+        newQuestion['titleQuiz'] = inputTitle;
         newQuestion['question'] = inputQuestion;
         questions.push(newQuestion);
         Answer1['option'] = inputAn1;
@@ -70,22 +82,19 @@ function addQuestion() {
         answer.push(Answer4);
         newQuestion['answer'] = answer;
         
+        console.log(questions);
+        
         displayQuestion(questions);
-
+        
     }
     setInLocalStorage(questions);
 }
 function setInLocalStorage(questions){
-
+    
     localStorage.setItem('question',JSON.stringify(questions));
 }
 
 // Delete quiz
-function deleteQuiz(event){
-    if (event.target.className === 'delete'){
-        event.target.parentElement.remove();
-    }
-}
 
 questions = [];
 
@@ -95,6 +104,5 @@ questions = [];
 const btnAdd = document.getElementById('btn-create');
 btnAdd.addEventListener('click',addQuestion);
 //  Button Delete Question
-
 
 

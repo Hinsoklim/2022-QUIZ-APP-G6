@@ -102,7 +102,9 @@ a{
     z-index: -1;
     
 }
-
+#quizContainer p{
+    font-size: 30px;
+}
 .question input{
     width: 90%;
     padding: 15px;
@@ -201,9 +203,9 @@ form{
     margin-top: 35px;
     
 }
-form{
+/* container{
     border-top: 3px solid blue;
-}
+} */
 
 .quizForm form input{
     margin-top: 15px;
@@ -220,4 +222,11 @@ form{
 
 #editQuiz{
     width: 50%;
+}
+#title{
+    padding: 15px;
+    width: 80%;
+    margin: 15px;
+    border: none;
+    border-radius: 3px;
 }

@@ -1,21 +1,30 @@
 // create a function to display questions
 function displayQuestion(){
-
     let newData = JSON.parse(localStorage.getItem('question'));
     let quizContainer = document.getElementById('quizContainer');
+    let old = document.querySelectorAll('.quizForm');
     let div = document.createElement('div');
+
     div.className = 'quizForm';
     document.body.appendChild(div);
-    let old = document.querySelectorAll('.quizForm');
     if (old.length >1){
         old[0].remove();
     }
     for (let questionQuiz of newData){
+    // create title of quiz
+        let titleOfQuiz = document.getElementById('quizContainer');
+        let title = document.createElement('p');
         let form = document.createElement('form');
         let p = document.createElement('p');
+
+        title.textContent = questionQuiz.titleQuiz;
+        titleOfQuiz.appendChild(title);
         p.textContent = questionQuiz.question;
         form.appendChild(p);
         div.appendChild(form);
+
+        
+    // loop object 
         for(ans of questionQuiz.answer){
             let optionAn = document.createElement('input');
             let br = document.createElement('br');
