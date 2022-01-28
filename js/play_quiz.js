@@ -1,6 +1,5 @@
 // create a function to display questions
 function displayQuestion(){
-
     let newData = JSON.parse(localStorage.getItem('question'));
     let quizContainer = document.getElementById('quizContainer');
     let div = document.createElement('div');
@@ -26,12 +25,10 @@ function displayQuestion(){
             form.append(optionAn);
             form.append(label);
             form.append(br);
-
             div.appendChild(form);
             quizContainer.append(div);
         }
     }
-
 }
 function playQuiz(){
     let btnPlay = document.getElementById('btnPlayQuiz');

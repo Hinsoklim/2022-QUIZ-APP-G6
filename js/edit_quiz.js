@@ -15,8 +15,6 @@ function displayQuestion( array ){
         btnDelete.textContent = 'Delete';
         btnDelete.classList.add('delete')
         btnDelete.id = 'delete'
-
-        console.log(btnDelete)
         p.textContent = questionQuiz.question;
         form.appendChild(p);
         div.appendChild(form);
@@ -73,6 +71,7 @@ function addQuestion() {
         displayQuestion(questions);
 
     }
+    // Function Local storage
     setInLocalStorage(questions);
 }
 function setInLocalStorage(questions){
