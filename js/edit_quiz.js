@@ -1,14 +1,16 @@
 // Function Display Question
 function displayQuestion(array){
     let div = document.createElement('div');
+    
     div.className = 'quizForm';
-    div.id = 'editQuiz'
+    div.id = 'editQuiz';
     document.body.appendChild(div);
     let old = document.querySelectorAll('.quizForm');
     if (old.length >1){
         old[0].remove();
     }
     for (let questionQuiz of array){
+        let bossForm = document.createElement('div');
         let form = document.createElement('form');
         form.dataset.numberQuestion= questionQuiz.idQuestion;
         let p = document.createElement('p');
@@ -32,8 +34,9 @@ function displayQuestion(array){
             form.append(label);
             form.append(br);
             form.appendChild(btnDelete);
-            div.appendChild(form);
+            bossForm.appendChild(form);
         }
+        div.appendChild(bossForm);
     }
 }
 
@@ -93,7 +96,7 @@ function addQuestion() {
         newQuestion['answer'] = answer;
     }
     // at to local storage
-    setInLocalStorage(questions)
+    // setInLocalStorage(questions)
     // display question
     displayQuestion(questions);
 }
@@ -106,21 +109,21 @@ function setInLocalStorage(){
 // function delete quiz
 function deleteQuiz(event){
     if (event.target.className === 'delete'){
+        
         // 1 - find the ID of the question from dataset
        let formParent = event.target.parentElement;
-       console.log(' hi----------', formParent.dataset.numberQuestion)
-
-
        // 2  - find the index of this quesion in array from this id
        for(indexQuestion in questions){
-           if (form.parentElement.dataset.numberQuestion === indexQuestion){
-               console.log(formParent.dataset.numberQuestion);
+           if (formParent.dataset.numberQuestion === indexQuestion){
+                questions.splice(indexQuestion);
            }
+           console.log(indexQuestion);
        }
-
+       console.log(questions);
        // 3 remove the question with the index
 
        // 4 refresh dom
+       setInLocalStorage(questions)
        displayQuestion(questions)
     }
 }
