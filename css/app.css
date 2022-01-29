@@ -157,6 +157,7 @@ form{
     margin-top: 30px;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 30px;
 }
 #btnSubmit:hover{
     background: rgb(94, 94, 253);
