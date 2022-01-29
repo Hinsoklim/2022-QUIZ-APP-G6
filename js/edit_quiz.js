@@ -126,3 +126,4 @@ questions = [];
 // Button ADD question 
 const btnAdd = document.getElementById('btn-create');
 btnAdd.addEventListener('click',addQuestion);
+
