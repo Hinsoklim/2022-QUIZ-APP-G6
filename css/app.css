@@ -131,13 +131,12 @@ form{
 .create-form{
     width: 50%;
     margin: auto;
-    background:rgb(194, 193, 252); 
+    background:rgb(244, 244, 255); 
     padding: 20px;
     box-sizing: border-box;
     border-top: 5px solid blue;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-left: 2px solid blue;
     margin-top: 20px;
 }
 
@@ -146,7 +145,10 @@ form{
     border: none;
     padding: 5px;
     border-bottom: 2px solid blue;
-    border-radius: 5px;
+    background: none;
+}
+input:focus{
+    border-bottom: 1px solid blue;
 }
 #btnSubmit{
     background-color: blue;
@@ -185,7 +187,9 @@ form{
 
 #btn-create{
     background: green;
+    margin-top: 10px;
     color: white;
+    padding: 10px;
 }
 #btn-create:hover{
     background: rgb(2, 177, 2);
@@ -227,6 +231,8 @@ form{
 
 select{
     padding: 5px;
+    width: 35%;
+    margin-top: 10px;
 }
 
 .score{
@@ -246,4 +252,8 @@ footer{
     text-align: center;
     margin-top: 50px;
     color: blue;
+}
+
+#key-answer{
+    color: green;
 }
