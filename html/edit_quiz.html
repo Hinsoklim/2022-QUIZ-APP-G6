@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2022-QUIZ-APP</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/app.css">
     <script src="../js/edit_quiz.js" defer></script>
 </head>
@@ -18,11 +17,7 @@
           <a href="#" class="active">EDIT</a>
         </div>
     </nav>
-    <!-- Button Add Question quiz  -->
-    <div class="button-add">
-        <button id="btnAdd">Done</button>
-    </div>
-
+    <!-- form create the question -->
     <div class="create-form" id="form">
         <div class="question">
             <input type="text" id="question" placeholder="Question" required>
@@ -31,11 +26,17 @@
             <input type="text" id="option1" class="ans" placeholder="Answer1" required> <br>
             <input type="text" id="option2" class="ans" placeholder="Answer2" required> <br>
             <input type="text" id="option3" class="ans" placeholder="Answer3" required> <br>
-            <input type="text" id="option4" class="ans" placeholder="Answer4" required>
+            <input type="text" id="option4" class="ans" placeholder="Answer4" required> <br>
+            <label >Key Answer :</label>
+            <select name="answer" id="trueAnswer" class="trueAnswer">
+                <option value="option1">Answer1</option>
+                <option value="option2">Answer2</option>
+                <option value="option3">Answer3</option>
+                <option value="option4">Answer4</option>
+            </select>
         </div>
         <div class="both-btn">
             <div class="btn-create-btn-cancel">
-                <button id="btn-answer">Key Answer</button>
                 <button id="btn-create">Create</button>
             </div>
         </div>
@@ -43,7 +44,5 @@
     <div class="card-form-created">
         
     </div>
-    
-    
 </body>
 </html>
