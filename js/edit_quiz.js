@@ -96,7 +96,7 @@ function addQuestion() {
         newQuestion['answer'] = answer;
     }
     // at to local storage
-    // setInLocalStorage(questions)
+    setInLocalStorage(questions)
     // display question
     displayQuestion(questions);
 }
@@ -109,22 +109,14 @@ function setInLocalStorage(){
 // function delete quiz
 function deleteQuiz(event){
     if (event.target.className === 'delete'){
-        
-        // 1 - find the ID of the question from dataset
-       let formParent = event.target.parentElement;
-       // 2  - find the index of this quesion in array from this id
+       let formParent = event.target.parentElement.firstChild.textContent;
        for(indexQuestion in questions){
-           if (formParent.dataset.numberQuestion === indexQuestion){
-                questions.splice(indexQuestion);
+           if (formParent === questions[indexQuestion].question){
+               questions.splice(indexQuestion,1);
            }
-           console.log(indexQuestion);
        }
-       console.log(questions);
-       // 3 remove the question with the index
-
-       // 4 refresh dom
-       setInLocalStorage(questions)
-       displayQuestion(questions)
+       setInLocalStorage(questions);
+       displayQuestion(questions);
     }
 }
 // id of the question 
@@ -134,3 +126,4 @@ questions = [];
 // Button ADD question 
 const btnAdd = document.getElementById('btn-create');
 btnAdd.addEventListener('click',addQuestion);
+
